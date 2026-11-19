@@ -194,7 +194,7 @@
             # Other parameters are defined in the 'object_detection.yaml' and 'custom_object_detection.yaml' files
 
         body_tracking:
-            bt_enabled: false # True to enable Body Tracking
+            bt_enabled: true # True to enable Body Tracking
             model: 'HUMAN_BODY_MEDIUM' # 'HUMAN_BODY_FAST', 'HUMAN_BODY_MEDIUM', 'HUMAN_BODY_ACCURATE'
             body_format: 'BODY_34' # 'BODY_18','BODY_34','BODY_38' - Only 'BODY_18' and 'BODY_34' have a 'GEN_2' network. 'BODY_34' requires `enable_body_fitting` to be true: the ZED SDK forces it on otherwise
             model_gen: 'GEN_2' # Body tracking network generation: 'GEN_2' (default, bottom-up, more robust in crowded scenes and to unusual poses, up to 18% faster and 14% more accurate) or 'GEN_1' (network used up to ZED SDK 5.4). Only 'BODY_18' and 'BODY_34' have a 'GEN_2' network: with 'BODY_38' the ZED SDK falls back to 'GEN_1'. Overridden by the 'ZED_SDK_BODY_TRACKING_MODEL_GENERATION' env variable when set [ZED SDK >= 5.5]
